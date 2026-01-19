@@ -1,7 +1,14 @@
 {
   "name": "repeating-decimal",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Convert repeating decimals into exact fractions",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PenguinCabinet/repeating-decimal",
+    "directory": "/"
+  },
+  "homepage": "https://github.com/PenguinCabinet/repeating-decimal",
+
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
