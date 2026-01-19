@@ -1,9 +1,9 @@
 # repeating-decimal
-Convert repeating decimals into Fractions.
+Convert repeating decimals into fractions.
 
 This package provides a utility to convert numbers with repeating parts(e.g. 0.987123123123...=41089/41625) into a reduced fractional representation.
 
-## Waring
+## Warning
 There is currently a bug that may prevent numbers from being generated correctly if they contain zeros.
 
 ## Features
