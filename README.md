@@ -14,14 +14,14 @@ This package provides a utility to convert numbers with repeating parts(e.g. 0.9
 ## Installation
 
 ```bash
-npm install repeating-fraction
+npm install repeating-decimal 
 ```
 
 ## Usage
 ```typescript
-import { make_fraction } from "repeating-fraction";
+import { make_fraction } from "repeating-decimal";
 
-const result = make_fraction("009","123",10));
+const result = make_fraction("009","123",10);
 
 console.log(result);
 // {numerator: 1519,denominator: 166500}
