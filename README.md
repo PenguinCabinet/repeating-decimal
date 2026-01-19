@@ -1,7 +1,10 @@
 # repeating-decimal
-Convert repeating decimals into exact fractions.
+Convert repeating decimals into Fractions.
 
 This package provides a utility to convert numbers with repeating parts(e.g. 0.987123123123...=41089/41625) into a reduced fractional representation.
+
+## Waring
+There is currently a bug that may prevent numbers from being generated correctly if they contain zeros.
 
 ## Features
 
@@ -21,7 +24,14 @@ npm install repeating-decimal
 ```typescript
 import { make_fraction } from "repeating-decimal";
 
-const result = make_fraction("009","123",10);
+const result = make_fraction(
+	{
+ 		integer:0,
+		leading_decimal:"009",
+		repeating_decimal:"123"
+	},
+	10
+);
 
 console.log(result);
 // {numerator: 1519,denominator: 166500}

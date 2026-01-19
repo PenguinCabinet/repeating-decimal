@@ -79,7 +79,16 @@ export interface Fraction {
 	denominator: number;
 }
 
-export function make_fraction(head:string,body:string,base:number):Fraction{
+export interface Repeating_decimal {
+	integer:number;
+	leading_decimal: string;
+	repeating_decimal: string;
+}
+
+export function make_fraction(v:Repeating_decimal,base:number):Fraction{
+    const head=v.leading_decimal;
+    const body=v.repeating_decimal;
+
     check_parameter(head, body, base);
 
     const head_array: number[] = head.split('').map(v => parseInt(v, base));
@@ -102,6 +111,8 @@ export function make_fraction(head:string,body:string,base:number):Fraction{
     }else{
         result=body_result;
     }
+
+    result[0]+=result[1]*v.integer;
 
     let result_temp2=gcd(result[0],result[1]);
     result[0]/=result_temp2;
